@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OAuth Callback</title>
+</head>
+<body>
+    <h1>Processando Autenticação...</h1>
+    <script>
+        // Captura o código de autorização da URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const authorizationCode = urlParams.get('code');
+
+        if (authorizationCode) {
+            // Lógica para trocar o código de autorização por um token
+            console.log('Código de autorização recebido:', authorizationCode);
+            // Faça uma requisição ao seu backend para processar o código
+        } else {
+            console.log('Nenhum código de autorização foi recebido.');
+        }
+    </script>
+</body>
+</html>
